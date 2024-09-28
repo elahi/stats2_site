@@ -1,0 +1,31 @@
+---
+title: "Statistical Modeling (Oceans 140/240)"
+filters:
+  - openlinksinnewpage
+---
+
+This website is a space for working through Quinn and Keough's 2nd edition [textbook](https://qkstats.com/) on data analysis for biologists. The `Chapter notes` are intended for review and discussion in a seminar ([Oceans 200](https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&page=0&catalog=&academicYear=&q=Oceans+200&collapse=)). The `Slides` are intended as a short primer on the topic by the discussion leader. The `Examples` are reproduced and lightly modified from the [original worked examples](https://mjkeough.github.io/index.html). 
+
+### Schedule
+| Week | Date          | Topic                                    | Prior to class     |
+|------|---------------|------------------------------------------|--------------------|
+| 1    | Tue., Jan. 7  | Intro to course; Probability I           | HH and SR prefaces |
+| 1    | Thu., Jan. 9  | Probability II                           | HH3.1-3.3          |
+| 2    | Tue., Jan. 14 | Probability distributions                | HH3.4              |
+| 2    | Thu., Jan. 16 | Likelihood                               | HH4                |
+| 3    | Tue., Jan. 21 | Intro to Bayesian statistical modeling   | HH1, SR1           |
+| 3    | Thu., Jan. 23 | Components of a Bayesian model           | SR2                |
+| 4    | Tue., Jan. 28 | Approximating the posterior distribution | SR3                |
+| 4    | Thu., Jan. 30 | Linear models                            | SR4.1-4.4          |
+| 5    | Tue., Feb. 4  | Polynomial regression and splines        | SR4.5              |
+| 5    | Thu., Feb. 6  | Multiple regression and DAGs             | SR5.1              |
+| 6    | Tue., Feb. 11 | Multiple regression and DAGs             | SR5.2-5.4          |
+| 6    | Thu., Feb. 13 | (More) causal inference                  | SR6                |
+| 7    | Tue., Feb. 18 | Overfitting, information entropy         | SR7.1-7.2          |
+| 7    | Thu., Feb. 20 | Regularization, model comparison         | SR7.3-7.6          |
+| 8    | Tue., Feb. 25 | Building interactions                    | SR8.1-8.2          |
+| 8    | Thu., Feb. 27 | Continuous interactions                  | SR8.3-8.4          |
+| 9    | Tue., Mar. 4  | Markov chain Monte Carlo                 | SR9.1-9.2          |
+| 9    | Thu., Mar. 6  | Hamiltonian MCMC                         | SR9.3-9.5          |
+| 10   | Tue., Mar. 11 | Generalized linear models                | SR10.2             |
+| 10   | Thu., Mar. 13 | Generalized linear models                | SR11.1-11.2        |

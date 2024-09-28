@@ -1,0 +1,59 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    # - "!examples_qk/"
+    # - "!examples_qmd/"
+    # - "!examples_qk/lowbayes"
+    # - "!examples_qk/lowboot"
+
+website:
+  title: "Statistical Modeling"
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Home"
+        file: index.qmd
+      - text: "Resources"
+        file: references.qmd
+      # - text: "Chapter notes"
+      #   file: chapter_notes/chapter2.qmd
+      # - text: "Slides"
+      #   file: slides/slides.qmd
+      # - text: "Examples"
+      #   file: examples/low.qmd
+
+  # sidebar:
+  #   - title: "Chapter notes"
+  #     style: "docked"
+  #     background: light
+  #     contents:
+        # - chapter_notes/chapter_notes.qmd
+        # - chapter_notes/chapter2.qmd
+        # - chapter_notes/chapter3.qmd
+        
+    # - title: "Examples"
+    #   style: "docked"
+    #   background: light
+    #   contents: 
+        # - examples/low.qmd
+        # - examples/lowboot.qmd
+        # #- examples/lowbayes.qmd
+        # - examples/serpulid.qmd
+        # - examples/linton.qmd
+        # - examples/caballes.qmd
+        # - examples/stokes.qmd
+        # - examples/steiger.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: source
+
