@@ -4,10 +4,8 @@ filters:
   - openlinksinnewpage
 ---
 
-This website is a space for working through Quinn and Keough's 2nd edition [textbook](https://qkstats.com/) on data analysis for biologists. The `Chapter notes` are intended for review and discussion in a seminar ([Oceans 200](https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&page=0&catalog=&academicYear=&q=Oceans+200&collapse=)). The `Slides` are intended as a short primer on the topic by the discussion leader. The `Examples` are reproduced and lightly modified from the [original worked examples](https://mjkeough.github.io/index.html). 
-
 ### Schedule
-| Week | Date          | Topic                                    | Prior to class     |
+| Week | Date          | Topic                                    | Reading            |
 |------|---------------|------------------------------------------|--------------------|
 | 1    | Tue., Jan. 7  | Intro to course; Probability I           | HH and SR prefaces |
 | 1    | Thu., Jan. 9  | Probability II                           | HH3.1-3.3          |

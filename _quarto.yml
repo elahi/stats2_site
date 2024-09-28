@@ -17,7 +17,7 @@ website:
       - text: "Home"
         file: index.qmd
       - text: "Resources"
-        file: references.qmd
+        file: resources.qmd
       # - text: "Chapter notes"
       #   file: chapter_notes/chapter2.qmd
       # - text: "Slides"

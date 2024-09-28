@@ -1,0 +1,47 @@
+---
+title: "Resources"
+filters:
+  - openlinksinnewpage
+---
+
+Useful websites related to the material:
+
+#### Statistical Rethinking
+
+Richard McElreath's site for Statistical Rethinking:
+
+<https://xcelab.net/rm/statistical-rethinking/>
+
+Stan code for rethinking 2 examples:
+
+<https://vincentarelbundock.github.io/rethinking2/>
+
+`brms` and `tidy` code for rethinking 2:
+
+<https://bookdown.org/content/4857/>
+
+#### Stan
+
+Stan user's guide:
+
+<https://mc-stan.org/docs/stan-users-guide/index.html>
+
+Stan case studies:
+
+<https://mc-stan.org/users/documentation/case-studies.html>
+
+Understand the contents of a stanfit object:
+
+<https://cran.r-project.org/web/packages/rstan/vignettes/stanfit-objects.html>
+
+Troubleshooting:
+
+<https://www.alexpghayes.com/post/2018-12-24_some-things-ive-learned-about-stan/>
+
+Multi-level models:
+
+<https://discourse.mc-stan.org/t/the-simplest-varying-intercepts-slopes-model-there-is/14305>
+
+<https://willhipson.netlify.app/post/stan-random-slopes/varying_effects_stan/>
+
+<https://mlisi.xyz/post/bayesian-multilevel-models-r-stan/>
