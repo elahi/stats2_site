@@ -4,6 +4,8 @@ filters:
   - openlinksinnewpage
 ---
 
+[SYLLABUS](files/oceans140_syllabus_2024.pdf)
+
 ### Schedule
 | Week | Date          | Topic                                    | Reading            |
 |------|---------------|------------------------------------------|--------------------|
