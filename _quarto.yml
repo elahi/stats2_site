@@ -16,7 +16,9 @@ website:
     left:
       - text: "Home"
         file: index.qmd
-      - text: "Resources"
+      - text: "Materials"
+        file: materials.qmd
+      - text: "Useful sites"
         file: resources.qmd
       # - text: "Chapter notes"
       #   file: chapter_notes/chapter2.qmd

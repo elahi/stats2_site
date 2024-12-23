@@ -1,31 +1,33 @@
 ---
-title: "Statistical Modeling (Oceans 140/240)"
+title: "Statistical Modeling (OCEANS 140/240)"
 filters:
   - openlinksinnewpage
 ---
 
-[SYLLABUS](files/oceans140_syllabus_2024.pdf)
+This course is a glorified reading group focused on applied statistical modeling. We will use [Richard McElreath's Statistical Rethinking](https://xcelab.net/rm/) text, and the schedule below is an adaptation of his [2024 course](https://github.com/rmcelreath/stat_rethinking_2024).
 
 ### Schedule
-| Week | Date          | Topic                                    | Reading            |
-|------|---------------|------------------------------------------|--------------------|
-| 1    | Tue., Jan. 7  | Intro to course; Probability I           | HH and SR prefaces |
-| 1    | Thu., Jan. 9  | Probability II                           | HH3.1-3.3          |
-| 2    | Tue., Jan. 14 | Probability distributions                | HH3.4              |
-| 2    | Thu., Jan. 16 | Likelihood                               | HH4                |
-| 3    | Tue., Jan. 21 | Intro to Bayesian statistical modeling   | HH1, SR1           |
-| 3    | Thu., Jan. 23 | Components of a Bayesian model           | SR2                |
-| 4    | Tue., Jan. 28 | Approximating the posterior distribution | SR3                |
-| 4    | Thu., Jan. 30 | Linear models                            | SR4.1-4.4          |
-| 5    | Tue., Feb. 4  | Polynomial regression and splines        | SR4.5              |
-| 5    | Thu., Feb. 6  | Multiple regression and DAGs             | SR5.1              |
-| 6    | Tue., Feb. 11 | Multiple regression and DAGs             | SR5.2-5.4          |
-| 6    | Thu., Feb. 13 | (More) causal inference                  | SR6                |
-| 7    | Tue., Feb. 18 | Overfitting, information entropy         | SR7.1-7.2          |
-| 7    | Thu., Feb. 20 | Regularization, model comparison         | SR7.3-7.6          |
-| 8    | Tue., Feb. 25 | Building interactions                    | SR8.1-8.2          |
-| 8    | Thu., Feb. 27 | Continuous interactions                  | SR8.3-8.4          |
-| 9    | Tue., Mar. 4  | Markov chain Monte Carlo                 | SR9.1-9.2          |
-| 9    | Thu., Mar. 6  | Hamiltonian MCMC                         | SR9.3-9.5          |
-| 10   | Tue., Mar. 11 | Generalized linear models                | SR10.2             |
-| 10   | Thu., Mar. 13 | Generalized linear models                | SR11.1-11.2        |
+
+| Week | Date          | Topic                                                   | Pre-class                          | SR2          | Due |
+|------------|------------|---------------|------------|------------|------------|
+| 1    | Tue., Jan. 7  | Intro to course; intro stats and coding review          | Science Before Statistics          | 1            |     |
+| 1    | Thu., Jan. 9  | Components of a Bayesian model                          | Garden of Forking Data (to 0:45)   | 2            |     |
+| 2    | Tue., Jan. 14 | Sampling the imaginary                                  | Garden of Forking Data (0:45-1:16) | 3            | HW1 |
+| 2    | Thu., Jan. 16 | Intro to linear models                                  | Geocentric Models                  | 4.1-4.4      |     |
+| 3    | Tue., Jan. 21 | Categorical effects, polynomial regression, and splines | Categories and Curves (to 1:14)    | 4.5-4.6; 5.3 | HW2 |
+| 3    | Thu., Jan. 23 | Multiple regression and intro to causal inference       | Elemental Confounds                | 5.1, SR 6    |     |
+| 4    | Tue., Jan. 28 | (More) causal inference                                 | Good and Bad Controls              | 6            | HW3 |
+| 4    | Thu., Jan. 30 | Overfitting, regularization, model comparison           | Overfitting                        | 7.1, 7.3-7.6 |     |
+| 5    | Tue., Feb. 4  | Markov chain Monte Carlo                                | MCMC                               | 8.1, 9       | HW4 |
+| 5    | Thu., Feb. 6  | Generalized linear models; Binomial regression          | Modeling Events (to 1:16)          | 10.2, 11.1   |     |
+| 6    | Tue., Feb. 11 | Confounds; Poisson regression                           | Counts and Confounds               | 11.2         | HW5 |
+| 6    | Thu., Feb. 13 | Ordered categorical outcomes                            | Ordered Categories                 | 12           |     |
+| 7    | Tue., Feb. 18 | Multilevel models                                       | Multilevel Models                  | 13           | HW6 |
+| 7    | Thu., Feb. 20 | Multilevel models                                       | Multilevel Adventures              | 13           |     |
+| 8    | Tue., Feb. 25 | Multilevel models                                       | Correlated Features                | 14           | HW7 |
+| 8    | Thu., Feb. 27 | Continuous categories                                   | Gaussian Processes                 | 14.5         |     |
+| 9    | Tue., Mar. 4  | Measurement error                                       | Measurement                        | 15.1         | HW8 |
+| 9    | Thu., Mar. 6  | Missing data                                            | Missing Data                       | 15.2         |     |
+| 10   | Tue., Mar. 11 | Scientific models                                       | Generalized Linear Madness         | 16           | HW9 |
+| 10   | Thu., Mar. 13 | Course wrap-up                                          | Horoscopes                         | 17           |     |
+

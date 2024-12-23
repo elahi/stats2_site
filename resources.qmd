@@ -12,14 +12,6 @@ Richard McElreath's site for Statistical Rethinking:
 
 <https://xcelab.net/rm/statistical-rethinking/>
 
-Stan code for rethinking 2 examples:
-
-<https://vincentarelbundock.github.io/rethinking2/>
-
-`brms` and `tidy` code for rethinking 2:
-
-<https://bookdown.org/content/4857/>
-
 #### Stan
 
 Stan user's guide:
