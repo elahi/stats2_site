@@ -4,7 +4,8 @@ filters:
   - openlinksinnewpage
 ---
 
-This course is a glorified reading group focused on applied statistical modeling. We will use [Richard McElreath's Statistical Rethinking](https://xcelab.net/rm/) text, and the schedule below is an adaptation of his [2024 course](https://github.com/rmcelreath/stat_rethinking_2024).
+This course schedule is an adaptation of Richard McElreath's [2024 course](https://github.com/rmcelreath/stat_rethinking_2024), using his [Statistical Rethinking](https://xcelab.net/rm/) text. 
+
 
 ### Schedule
 
