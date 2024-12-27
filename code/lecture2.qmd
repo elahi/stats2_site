@@ -2,6 +2,7 @@
 title: "Video lecture 2 (Garden of Forking Data)"
 format: html
 execute:
+  cache: true
   warning: false
 ---
 
@@ -9,7 +10,7 @@ Book: Statistical Rethinking, 2nd Edition
 
 Video lectures: [https://github.com/rmcelreath/stat_rethinking_2025](https://github.com/rmcelreath/stat_rethinking_2025)
 
-[Source code for this page](https://raw.githubusercontent.com/elahi/stats2/refs/heads/main/code/lecture2.qmd)
+[Source code for this page](https://raw.githubusercontent.com/elahi/stats2_site/refs/heads/main/code/lecture2.qmd)
 
 ```{r}
 library(rethinking)
