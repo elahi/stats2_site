@@ -8,7 +8,7 @@ filters:
 
 [Syllabus](files/oceans140_syllabus_2025_241222.pdf)
 
-[Code for lecture 2](_code2025/lecture2.qmd)
+[Code for lecture 2](code/lecture2.html)
 
 [Course intro](_lectures/course_intro.pdf)
 

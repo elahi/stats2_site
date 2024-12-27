@@ -3,10 +3,6 @@ project:
   output-dir: docs
   render:
     - "*.qmd"
-    # - "!examples_qk/"
-    # - "!examples_qmd/"
-    # - "!examples_qk/lowbayes"
-    # - "!examples_qk/lowboot"
 
 website:
   title: "Statistical Modeling"
@@ -18,36 +14,10 @@ website:
         file: index.qmd
       - text: "Course materials"
         file: materials.qmd
+      - text: "Code"
+        file: code.qmd
       - text: "Online resources"
         file: resources.qmd
-      # - text: "Chapter notes"
-      #   file: chapter_notes/chapter2.qmd
-      # - text: "Slides"
-      #   file: slides/slides.qmd
-      # - text: "Examples"
-      #   file: examples/low.qmd
-
-  # sidebar:
-  #   - title: "Chapter notes"
-  #     style: "docked"
-  #     background: light
-  #     contents:
-        # - chapter_notes/chapter_notes.qmd
-        # - chapter_notes/chapter2.qmd
-        # - chapter_notes/chapter3.qmd
-        
-    # - title: "Examples"
-    #   style: "docked"
-    #   background: light
-    #   contents: 
-        # - examples/low.qmd
-        # - examples/lowboot.qmd
-        # #- examples/lowbayes.qmd
-        # - examples/serpulid.qmd
-        # - examples/linton.qmd
-        # - examples/caballes.qmd
-        # - examples/stokes.qmd
-        # - examples/steiger.qmd
 
 bibliography: references.bib
 
