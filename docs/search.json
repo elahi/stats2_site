@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Online resources",
+    "section": "",
+    "text": "Useful websites related to the material:\n\nStatistical Rethinking\nRichard McElreath’s site for Statistical Rethinking:\nhttps://xcelab.net/rm/statistical-rethinking/\n\n\nStan\nStan user’s guide:\nhttps://mc-stan.org/docs/stan-users-guide/index.html\nStan case studies:\nhttps://mc-stan.org/users/documentation/case-studies.html\nUnderstand the contents of a stanfit object:\nhttps://cran.r-project.org/web/packages/rstan/vignettes/stanfit-objects.html\nTroubleshooting:\nhttps://www.alexpghayes.com/post/2018-12-24_some-things-ive-learned-about-stan/\nMulti-level models:\nhttps://discourse.mc-stan.org/t/the-simplest-varying-intercepts-slopes-model-there-is/14305\nhttps://willhipson.netlify.app/post/stan-random-slopes/varying_effects_stan/\nhttps://mlisi.xyz/post/bayesian-multilevel-models-r-stan/"
+  },
+  {
+    "objectID": "materials.html",
+    "href": "materials.html",
+    "title": "Course materials",
+    "section": "",
+    "text": "Syllabus\nCode for lecture 2\nCourse intro\nProbability"
+  },
+  {
+    "objectID": "materials.html#week-1",
+    "href": "materials.html#week-1",
+    "title": "Course materials",
+    "section": "",
+    "text": "Syllabus\nCode for lecture 2\nCourse intro\nProbability"
+  },
+  {
+    "objectID": "materials.html#week-2",
+    "href": "materials.html#week-2",
+    "title": "Course materials",
+    "section": "Week 2",
+    "text": "Week 2"
+  },
+  {
+    "objectID": "code/lecture2.html",
+    "href": "code/lecture2.html",
+    "title": "Video lecture 2 (Garden of Forking Data)",
+    "section": "",
+    "text": "Book: Statistical Rethinking, 2nd Edition\nVideo lectures: https://github.com/rmcelreath/stat_rethinking_2025\nSource code for this page\nlibrary(rethinking)"
+  },
+  {
+    "objectID": "code/lecture2.html#chapter-2",
+    "href": "code/lecture2.html#chapter-2",
+    "title": "Video lecture 2 (Garden of Forking Data)",
+    "section": "Chapter 2",
+    "text": "Chapter 2\n\nsample &lt;- c(\"W\",\"L\",\"W\",\"W\",\"W\",\"L\",\"W\",\"L\",\"W\")\nW &lt;- sum(sample==\"W\") # number of W observed\nL &lt;- sum(sample==\"L\") # number of L observed\np &lt;- c(0,0.25,0.5,0.75,1) # proportions W\nways &lt;- sapply( p , function(q) (q*4)^W * ((1-q)*4)^L )\nprob &lt;- ways/sum(ways)\ncbind( p , ways , prob )\n\n        p ways       prob\n[1,] 0.00    0 0.00000000\n[2,] 0.25   27 0.02129338\n[3,] 0.50  512 0.40378549\n[4,] 0.75  729 0.57492114\n[5,] 1.00    0 0.00000000\n\n\n\n# function to toss a globe covered p by water N times\nsim_globe &lt;- function( p=0.7 , N=9 ) {\n  sample(c(\"W\",\"L\"),size=N,prob=c(p,1-p),replace=TRUE)\n}\nsim_globe()\n\n[1] \"W\" \"W\" \"L\" \"L\" \"W\" \"W\" \"W\" \"L\" \"W\"\n\nreplicate(sim_globe(p=0.5,N=9),n=10)\n\n      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]\n [1,] \"L\"  \"L\"  \"L\"  \"L\"  \"L\"  \"L\"  \"L\"  \"L\"  \"W\"  \"W\"  \n [2,] \"L\"  \"W\"  \"L\"  \"W\"  \"L\"  \"W\"  \"L\"  \"W\"  \"L\"  \"W\"  \n [3,] \"L\"  \"W\"  \"W\"  \"L\"  \"L\"  \"W\"  \"W\"  \"W\"  \"W\"  \"W\"  \n [4,] \"W\"  \"W\"  \"W\"  \"L\"  \"W\"  \"L\"  \"L\"  \"L\"  \"W\"  \"L\"  \n [5,] \"W\"  \"L\"  \"L\"  \"W\"  \"L\"  \"W\"  \"W\"  \"W\"  \"W\"  \"L\"  \n [6,] \"L\"  \"L\"  \"W\"  \"L\"  \"L\"  \"W\"  \"L\"  \"L\"  \"W\"  \"L\"  \n [7,] \"L\"  \"L\"  \"L\"  \"W\"  \"W\"  \"L\"  \"W\"  \"L\"  \"L\"  \"W\"  \n [8,] \"L\"  \"L\"  \"W\"  \"L\"  \"W\"  \"W\"  \"L\"  \"W\"  \"W\"  \"W\"  \n [9,] \"L\"  \"L\"  \"W\"  \"L\"  \"L\"  \"W\"  \"L\"  \"W\"  \"W\"  \"L\"  \n\nsim_globe( p=1 , N=11 )\n\n [1] \"W\" \"W\" \"W\" \"W\" \"W\" \"W\" \"W\" \"W\" \"W\" \"W\" \"W\"\n\nsum( sim_globe( p=0.5 , N=1e4 ) == \"W\" ) / 1e4\n\n[1] 0.5008\n\n# function to compute posterior distribution\ncompute_posterior &lt;- function( the_sample , poss=c(0,0.25,0.5,0.75,1) ) {\n  W &lt;- sum(the_sample==\"W\") # number of W observed\n  L &lt;- sum(the_sample==\"L\") # number of L observed\n  ways &lt;- sapply( poss , function(q) (q*4)^W * ((1-q)*4)^L )\n  post &lt;- ways/sum(ways)\n  bars &lt;- sapply( post, function(q) make_bar(q) )\n  data.frame( poss , ways , post=round(post,3) , bars )\n}\n\ncompute_posterior(sim_globe())\n\n  poss ways  post                 bars\n1 0.00    0 0.000                     \n2 0.25    9 0.003                     \n3 0.50  512 0.189 ####                \n4 0.75 2187 0.808 ################    \n5 1.00    0 0.000"
+  },
+  {
+    "objectID": "code/lecture2.html#chapter-3",
+    "href": "code/lecture2.html#chapter-3",
+    "title": "Video lecture 2 (Garden of Forking Data)",
+    "section": "Chapter 3",
+    "text": "Chapter 3\n\npost_samples &lt;- rbeta( 1e3 , 6+1 , 3+1 )\nhead(post_samples)\n\n[1] 0.5213225 0.6944935 0.5512558 0.8223423 0.8047079 0.5818702\n\ndens( post_samples , lwd=4 , col=2 , xlab=\"proportion water\" , adj=0.1 )\ncurve( dbeta(x,6+1,3+1) , add=TRUE , lty=2 , lwd=3 )\n\n\n\n\n\n\n\n\n\n# now simulate posterior predictive distribution\npost_samples &lt;- rbeta(1e4,6+1,3+1)\npred_post &lt;- sapply( post_samples , function(p) sum(sim_globe(p,10)==\"W\"))\ntab_post &lt;- table(pred_post)\n\nmean_p &lt;- mean(post_samples)\nwater_mean_predictions &lt;- rbinom( 1e4 , size=9 , prob=mean_p )\nsimplehist( water_mean_predictions , xlab=\"number of W\" )\nfor ( i in 0.1:10.1 ) lines(c(i,i),c(0,tab_post[i+1]),lwd=4,col=4)"
+  },
+  {
+    "objectID": "code/lecture2.html#chapter-2-1",
+    "href": "code/lecture2.html#chapter-2-1",
+    "title": "Video lecture 2 (Garden of Forking Data)",
+    "section": "Chapter 2",
+    "text": "Chapter 2\n\n## R code 2.1\nways &lt;- c( 0 , 3 , 8 , 9 , 0 )\nways/sum(ways)\n\n[1] 0.00 0.15 0.40 0.45 0.00\n\n## R code 2.2\ndbinom( 6 , size=9 , prob=0.5 )\n\n[1] 0.1640625\n\n## R code 2.3\n# define grid\np_grid &lt;- seq( from=0 , to=1 , length.out=20 )\n\n# define prior\nprior &lt;- rep( 1 , 20 )\n\n# compute likelihood at each value in grid\nlikelihood &lt;- dbinom( 6 , size=9 , prob=p_grid )\n\n# compute product of likelihood and prior\nunstd.posterior &lt;- likelihood * prior\n\n# standardize the posterior, so it sums to 1\nposterior &lt;- unstd.posterior / sum(unstd.posterior)\n\n## R code 2.4\nplot( p_grid , posterior , type=\"b\" ,\n    xlab=\"probability of water\" , ylab=\"posterior probability\" )\nmtext( \"20 points\" )\n\n\n\n\n\n\n\n## R code 2.5\nprior &lt;- ifelse( p_grid &lt; 0.5 , 0 , 1 )\nprior &lt;- exp( -5*abs( p_grid - 0.5 ) )\n\n## R code 2.6\nlibrary(rethinking)\nglobe.qa &lt;- quap(\n    alist(\n        W ~ dbinom( W+L ,p) ,  # binomial likelihood\n        p ~ dunif(0,1)     # uniform prior\n    ) ,\n    data=list(W=6,L=3) )\n\n# display summary of quadratic approximation\nprecis( globe.qa )\n\n       mean        sd      5.5%     94.5%\np 0.6666667 0.1571338 0.4155366 0.9177968\n\n## R code 2.7\n# analytical calculation\nW &lt;- 6\nL &lt;- 3\ncurve( dbeta( x , W+1 , L+1 ) , from=0 , to=1 )\n# quadratic approximation\ncurve( dnorm( x , 0.67 , 0.16 ) , lty=2 , add=TRUE )\n\n\n\n\n\n\n\n## R code 2.8\nn_samples &lt;- 1000\np &lt;- rep( NA , n_samples )\np[1] &lt;- 0.5\nW &lt;- 6\nL &lt;- 3\nfor ( i in 2:n_samples ) {\n    p_new &lt;- rnorm( 1 , p[i-1] , 0.1 )\n    if ( p_new &lt; 0 ) p_new &lt;- abs( p_new )\n    if ( p_new &gt; 1 ) p_new &lt;- 2 - p_new\n    q0 &lt;- dbinom( W , W+L , p[i-1] )\n    q1 &lt;- dbinom( W , W+L , p_new )\n    p[i] &lt;- ifelse( runif(1) &lt; q1/q0 , p_new , p[i-1] )\n}\n\n## R code 2.9\ndens( p , xlim=c(0,1) )\ncurve( dbeta( x , W+1 , L+1 ) , lty=2 , add=TRUE )"
+  },
+  {
+    "objectID": "code/lecture2.html#chapter-3-1",
+    "href": "code/lecture2.html#chapter-3-1",
+    "title": "Video lecture 2 (Garden of Forking Data)",
+    "section": "Chapter 3",
+    "text": "Chapter 3\n\n## R code 3.1\nPr_Positive_Vampire &lt;- 0.95\nPr_Positive_Mortal &lt;- 0.01\nPr_Vampire &lt;- 0.001\nPr_Positive &lt;- Pr_Positive_Vampire * Pr_Vampire +\n               Pr_Positive_Mortal * ( 1 - Pr_Vampire )\n( Pr_Vampire_Positive &lt;- Pr_Positive_Vampire*Pr_Vampire / Pr_Positive )\n\n[1] 0.08683729\n\n## R code 3.2\np_grid &lt;- seq( from=0 , to=1 , length.out=1000 )\nprob_p &lt;- rep( 1 , 1000 )\nprob_data &lt;- dbinom( 6 , size=9 , prob=p_grid )\nposterior &lt;- prob_data * prob_p\nposterior &lt;- posterior / sum(posterior)\n\n## R code 3.3\nsamples &lt;- sample( p_grid , prob=posterior , size=1e4 , replace=TRUE )\n\n## R code 3.4\nplot( samples )\n\n\n\n\n\n\n\n## R code 3.5\nlibrary(rethinking)\ndens( samples )\n\n\n\n\n\n\n\n## R code 3.6\n# add up posterior probability where p &lt; 0.5\nsum( posterior[ p_grid &lt; 0.5 ] )\n\n[1] 0.1718746\n\n## R code 3.7\nsum( samples &lt; 0.5 ) / 1e4\n\n[1] 0.1755\n\n## R code 3.8\nsum( samples &gt; 0.5 & samples &lt; 0.75 ) / 1e4\n\n[1] 0.5977\n\n## R code 3.9\nquantile( samples , 0.8 )\n\n      80% \n0.7607608 \n\n## R code 3.10\nquantile( samples , c( 0.1 , 0.9 ) )\n\n      10%       90% \n0.4493493 0.8118118 \n\n## R code 3.11\np_grid &lt;- seq( from=0 , to=1 , length.out=1000 )\nprior &lt;- rep(1,1000)\nlikelihood &lt;- dbinom( 3 , size=3 , prob=p_grid )\nposterior &lt;- likelihood * prior\nposterior &lt;- posterior / sum(posterior)\nsamples &lt;- sample( p_grid , size=1e4 , replace=TRUE , prob=posterior )\n\n## R code 3.12\nPI( samples , prob=0.5 )\n\n      25%       75% \n0.7067067 0.9279279 \n\n## R code 3.13\nHPDI( samples , prob=0.5 )\n\n     |0.5      0.5| \n0.8378378 1.0000000 \n\n## R code 3.14\np_grid[ which.max(posterior) ]\n\n[1] 1\n\n## R code 3.15\nchainmode( samples , adj=0.01 )\n\n[1] 0.9970914\n\n## R code 3.16\nmean( samples )\n\n[1] 0.7980337\n\nmedian( samples )\n\n[1] 0.8378378\n\n## R code 3.17\nsum( posterior*abs( 0.5 - p_grid ) )\n\n[1] 0.3128752\n\n## R code 3.18\nloss &lt;- sapply( p_grid , function(d) sum( posterior*abs( d - p_grid ) ) )\n\n## R code 3.19\np_grid[ which.min(loss) ]\n\n[1] 0.8408408\n\n## R code 3.20\ndbinom( 0:2 , size=2 , prob=0.7 )\n\n[1] 0.09 0.42 0.49\n\n## R code 3.21\nrbinom( 1 , size=2 , prob=0.7 )\n\n[1] 2\n\n## R code 3.22\nrbinom( 10 , size=2 , prob=0.7 )\n\n [1] 2 1 2 2 1 1 2 1 1 2\n\n## R code 3.23\ndummy_w &lt;- rbinom( 1e5 , size=2 , prob=0.7 )\ntable(dummy_w)/1e5\n\ndummy_w\n      0       1       2 \n0.08983 0.41737 0.49280 \n\n## R code 3.24\ndummy_w &lt;- rbinom( 1e5 , size=9 , prob=0.7 )\nsimplehist( dummy_w , xlab=\"dummy water count\" )\n\n\n\n\n\n\n\n## R code 3.25\nw &lt;- rbinom( 1e4 , size=9 , prob=0.6 )\n\n## R code 3.26\nw &lt;- rbinom( 1e4 , size=9 , prob=samples )\n\n## R code 3.27\np_grid &lt;- seq( from=0 , to=1 , length.out=1000 )\nprior &lt;- rep( 1 , 1000 )\nlikelihood &lt;- dbinom( 6 , size=9 , prob=p_grid )\nposterior &lt;- likelihood * prior\nposterior &lt;- posterior / sum(posterior)\nset.seed(100)\nsamples &lt;- sample( p_grid , prob=posterior , size=1e4 , replace=TRUE )"
+  },
+  {
+    "objectID": "code.html",
+    "href": "code.html",
+    "title": "Code to accompany video lectures",
+    "section": "",
+    "text": "Lecture 2"
+  },
+  {
+    "objectID": "code.html#section",
+    "href": "code.html#section",
+    "title": "Code to accompany video lectures",
+    "section": "",
+    "text": "Lecture 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Statistical Modeling (OCEANS 140/240)",
+    "section": "",
+    "text": "This course schedule is an adaptation of Richard McElreath’s 2024 course, using his Statistical Rethinking text.\n\nSchedule\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nPre-class\nSR2\nDue\n\n\n\n\n1\nTue., Jan. 7\nIntro to course; intro stats and coding review\nScience Before Statistics\n1\n\n\n\n1\nThu., Jan. 9\nComponents of a Bayesian model\nGarden of Forking Data (to 0:45)\n2\n\n\n\n2\nTue., Jan. 14\nSampling the imaginary\nGarden of Forking Data (0:45-1:16)\n3\nHW1\n\n\n2\nThu., Jan. 16\nIntro to linear models\nGeocentric Models\n4.1-4.4\n\n\n\n3\nTue., Jan. 21\nCategorical effects, polynomial regression, and splines\nCategories and Curves (to 1:14)\n4.5-4.6; 5.3\nHW2\n\n\n3\nThu., Jan. 23\nMultiple regression and intro to causal inference\nElemental Confounds\n5.1, SR 6\n\n\n\n4\nTue., Jan. 28\n(More) causal inference\nGood and Bad Controls\n6\nHW3\n\n\n4\nThu., Jan. 30\nOverfitting, regularization, model comparison\nOverfitting\n7.1, 7.3-7.6\n\n\n\n5\nTue., Feb. 4\nMarkov chain Monte Carlo\nMCMC\n8.1, 9\nHW4\n\n\n5\nThu., Feb. 6\nGeneralized linear models; Binomial regression\nModeling Events (to 1:16)\n10.2, 11.1\n\n\n\n6\nTue., Feb. 11\nConfounds; Poisson regression\nCounts and Confounds\n11.2\nHW5\n\n\n6\nThu., Feb. 13\nOrdered categorical outcomes\nOrdered Categories\n12\n\n\n\n7\nTue., Feb. 18\nMultilevel models\nMultilevel Models\n13\nHW6\n\n\n7\nThu., Feb. 20\nMultilevel models\nMultilevel Adventures\n13\n\n\n\n8\nTue., Feb. 25\nMultilevel models\nCorrelated Features\n14\nHW7\n\n\n8\nThu., Feb. 27\nContinuous categories\nGaussian Processes\n14.5\n\n\n\n9\nTue., Mar. 4\nMeasurement error\nMeasurement\n15.1\nHW8\n\n\n9\nThu., Mar. 6\nMissing data\nMissing Data\n15.2\n\n\n\n10\nTue., Mar. 11\nScientific models\nGeneralized Linear Madness\n16\nHW9\n\n\n10\nThu., Mar. 13\nCourse wrap-up\nHoroscopes\n17"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Resources"
+  }
+]
