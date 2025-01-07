@@ -8,9 +8,9 @@ filters:
 
 [Syllabus](files/oceans140_syllabus_2025.pdf)
 
-[Code for lecture 2](code/lecture2.html)
+[Course intro](_lectures/course_intro.pdf)
 
-<!-- [Course intro](_lectures/course_intro.pdf) -->
+[Code for lecture 2](code/lecture2.html)
 
 <!-- [Probability](_lectures/probability-lecture.pdf) -->
 
