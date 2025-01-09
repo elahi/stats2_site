@@ -8,9 +8,11 @@ filters:
 
 [Syllabus](files/oceans140_syllabus_2025.pdf)
 
-[Course intro](_lectures/course_intro.pdf)
+[Course intro](lectures/course_intro.pdf)
 
-[Code for lecture 2](code/lecture2.html)
+[Code for video 2](code/video2.html)
+
+[Components of a Bayesian model](lectures/model_components.pdf)
 
 <!-- [Probability](_lectures/probability-lecture.pdf) -->
 
