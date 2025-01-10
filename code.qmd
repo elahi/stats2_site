@@ -6,5 +6,5 @@ filters:
 
 ## 
 
-[Lecture 2](code/lecture2.html)
+[Lecture 2](code/video2.html)
 
