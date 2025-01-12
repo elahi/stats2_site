@@ -1,0 +1,146 @@
+---
+title: "Chapter 03. Sampling the Imaginary"
+format: html
+execute:
+  warning: false
+---
+
+Book: Statistical Rethinking, 2nd Edition
+
+```{r}
+library(rethinking)
+```
+
+## Practice
+
+### Easy. 
+
+These problems use the samples from the posterior distribution for the globe tossing example. This code will give you a specific set of samples, so that you can check your answers exactly.
+
+```{r r-code-3.27, fig.width = 7, fig.height = 3.5}
+p_grid <- seq(from = 0, to = 1, length.out = 1000)
+prior <- rep(1, 1000)
+likelihood <- dbinom(6, size = 9, prob = p_grid)
+posterior <- likelihood * prior
+posterior <- posterior/sum(posterior)
+set.seed(100)
+samples <- sample(p_grid, prob = posterior, size = 1e4, replace = TRUE)
+
+par(mfrow = c(1,2))
+plot(samples, ylim = c(0,1))
+dens(samples)
+```
+
+Use the values in `samples` to answer the questions that follow.
+
+3E1. How much posterior probability lies below p = 0.2?
+```{r 3E1}
+sum(samples < 0.2) / 1e4
+```
+3E2. How much posterior probability lies above p = 0.8?
+```{r 3E2}
+sum(samples > 0.8) / 1e4
+```
+3E3. How much posterior probability lies between p = 0.2 and p = 0.8?
+```{r 3E3}
+sum(samples > 0.2 & samples < 0.8) / 1e4
+```
+3E4. 20% of the posterior probability lies below which value of p?
+```{r 3E4}
+quantile(samples, 0.2)
+```
+3E5. 20% of the posterior probability lies above which value of p?
+```{r 3E5}
+quantile(samples, 0.8)
+```
+3E6. Which values of p contain the narrowest interval equal to 66% of the posterior probability?
+```{r 3E6}
+HPDI(samples, 0.66)
+```
+3E7. Which values of p contain 66% of the posterior probability, assuming equal posterior probability both below and above the interval?
+```{r 3E7}
+PI(samples, 0.66)
+```
+### Medium.
+
+3M1. Suppose the globe tossing data had turned out to be 8 water in 15 tosses. Construct the posterior distribution, using grid approximation. Use the same flat prior as before.
+
+```{r 3M1}
+n_water <- 8
+n_tosses <- 15
+grid_size <- 1000
+
+p_grid <- seq(from = 0, to = 1, length.out = grid_size)
+prior <- rep(1, grid_size)
+likelihood <- dbinom(n_water, size = n_tosses, prob = p_grid)
+posterior <- likelihood * prior
+posterior <- posterior/sum(posterior)
+set.seed(100)
+plot(p_grid, posterior, type = "l")
+```
+
+3M2. Draw 10,000 samples from the grid approximation from above. Then use the samples to calculate the 90% HPDI for p.
+```{r 3M2, fig.height = 3.5}
+samples <- sample(p_grid, prob = posterior, size = 1e4, replace = TRUE)
+par(mfrow = c(1,2))
+plot(samples, ylim = c(0,1))
+dens(samples)
+HPDI(samples, prob = 0.9)
+```
+3M3. Construct a posterior predictive check for this model and data. This means simulate the distribution of samples, averaging over the posterior uncertainty in p. What is the probability of observing 8 waters in 15 tosses?
+```{r 3M3}
+n_pred <- 1e4
+w_pred <- rbinom(n_pred, size = 15, prob = samples)
+simplehist(w_pred)
+sum(w_pred == 8) / n_pred
+```
+3M4. Using the posterior distribution constructed from the new (8/15) data, now calculate the probability of observing 6 waters in 9 tosses.
+```{r 3M4}
+n_pred <- 1e4
+w_pred <- rbinom(n_pred, size = 9, prob = samples)
+simplehist(w_pred)
+sum(w_pred == 6) / n_pred
+
+## What is the probability of the true p = 0.7?
+w_pred <- rbinom(n_pred, size = 10, prob = samples)
+sum(w_pred == 7) / n_pred
+```
+
+3M5. Start over at 3M1, but now use a prior that is zero below p = 0.5 and a constant above p = 0.5. This corresponds to prior information that a majority of the Earth’s surface is water. Repeat each problem above and compare the inferences. What difference does the better prior make? If it helps, compare inferences (using both priors) to the true value p = 0.7.
+```{r 3M5}
+n_water <- 8
+n_tosses <- 15
+grid_size <- 1000
+n_samples <- 1e4
+
+## Calculate posterior with new prior
+p_grid <- seq(from = 0, to = 1, length.out = grid_size)
+prior <- ifelse(p_grid < 0.5, 0, 1)
+likelihood <- dbinom(n_water, size = n_tosses, prob = p_grid)
+posterior <- likelihood * prior
+posterior <- posterior/sum(posterior)
+plot(p_grid, posterior, type = "l")
+
+## Draw samples
+set.seed(100)
+samples <- sample(p_grid, prob = posterior, size = n_samples, replace = TRUE)
+par(mfrow = c(1,2))
+plot(samples, ylim = c(0,1))
+dens(samples)
+HPDI(samples, prob = 0.9)
+
+## Posterior predictions
+n_pred <- 1e4
+w_pred <- rbinom(n_pred, size = n_tosses, prob = samples)
+par(mfrow = c(1,1))
+simplehist(w_pred)
+sum(w_pred == 8) / n_pred
+
+## Calculate probability of observing 6 waters in 9 tosses
+w_pred <- rbinom(n_pred, size = 9, prob = samples)
+sum(w_pred == 6) / n_pred
+
+## What is the probability of the true p = 0.7?
+w_pred <- rbinom(n_pred, size = 10, prob = samples)
+sum(w_pred == 7) / n_pred
+```
