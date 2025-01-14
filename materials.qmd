@@ -20,4 +20,6 @@ filters:
 
 [Sampling practice (SR2 ch3)](images/sr2_ch3_practice.png)
 
+[Etherpad](https://etherpad.wikimedia.org/p/re_stats2)
+
 <!-- [Probability](_lectures/probability-lecture.pdf) -->
