@@ -14,10 +14,10 @@ filters:
 
 [Components of a Bayesian model](lectures/model_components.pdf)
 
-<!-- [Probability](_lectures/probability-lecture.pdf) -->
-
 ## Week 2
 
 [Sampling the posterior](lectures/sampling_the_posterior.pdf)
 
+[Sampling practice (SR2 ch3)](images/sr2_ch3_practice.png)
 
+<!-- [Probability](_lectures/probability-lecture.pdf) -->
