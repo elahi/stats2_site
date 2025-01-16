@@ -6,5 +6,6 @@ filters:
 
 ## 
 
-[Lecture 2](code/video2.html)
+[Video 2](code/video2.html)
 
+[Video 3](code/video3.R)

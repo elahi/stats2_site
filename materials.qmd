@@ -22,4 +22,7 @@ filters:
 
 [Etherpad](https://etherpad.wikimedia.org/p/re_stats2)
 
+[Code for video 3](code/video3.R)
+
+
 <!-- [Probability](_lectures/probability-lecture.pdf) -->
