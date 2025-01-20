@@ -14,6 +14,8 @@ filters:
 
 [Components of a Bayesian model](lectures/model_components.pdf)
 
+[Homework 1](files/hw1.pdf)
+
 ## Week 2
 
 [Sampling the posterior](lectures/sampling_the_posterior.pdf)
@@ -23,6 +25,14 @@ filters:
 [Etherpad](https://etherpad.wikimedia.org/p/re_stats2)
 
 [Code for video 3](code/video3.R)
+
+[Homework 2](files/hw2.pdf)
+
+[Project overview](files/project_overview-250115.pdf)
+
+## Week 3
+
+[Code for video 4](code/video4.R)
 
 
 <!-- [Probability](_lectures/probability-lecture.pdf) -->
