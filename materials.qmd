@@ -34,5 +34,7 @@ filters:
 
 [Code for video 4](code/video4.R)
 
+[Code for video 5](code/video5.R)
+
 
 <!-- [Probability](_lectures/probability-lecture.pdf) -->
