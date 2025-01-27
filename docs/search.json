@@ -11,21 +11,21 @@
     "href": "materials.html",
     "title": "Course materials",
     "section": "",
-    "text": "Syllabus\nCourse intro\nCode for video 2\nComponents of a Bayesian model\nHomework 1"
+    "text": "Syllabus\nCourse intro\nCode for video 2\nComponents of a Bayesian model"
   },
   {
     "objectID": "materials.html#week-1",
     "href": "materials.html#week-1",
     "title": "Course materials",
     "section": "",
-    "text": "Syllabus\nCourse intro\nCode for video 2\nComponents of a Bayesian model\nHomework 1"
+    "text": "Syllabus\nCourse intro\nCode for video 2\nComponents of a Bayesian model"
   },
   {
     "objectID": "materials.html#week-2",
     "href": "materials.html#week-2",
     "title": "Course materials",
     "section": "Week 2",
-    "text": "Week 2\nSampling the posterior\nSampling practice (SR2 ch3)\nEtherpad\nCode for video 3\nHomework 2\nProject overview"
+    "text": "Week 2\nSampling the posterior\nSampling practice (SR2 ch3)\nEtherpad\nCode for video 3"
   },
   {
     "objectID": "code/video2.html",
@@ -67,14 +67,14 @@
     "href": "code.html",
     "title": "Code to accompany video lectures",
     "section": "",
-    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5"
+    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6"
   },
   {
     "objectID": "code.html#section",
     "href": "code.html#section",
     "title": "Code to accompany video lectures",
     "section": "",
-    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5"
+    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6"
   },
   {
     "objectID": "index.html",
@@ -96,5 +96,12 @@
     "title": "Course materials",
     "section": "Week 3",
     "text": "Week 3\nCode for video 4\nCode for video 5"
+  },
+  {
+    "objectID": "materials.html#week-4",
+    "href": "materials.html#week-4",
+    "title": "Course materials",
+    "section": "Week 4",
+    "text": "Week 4\nCode for video 6"
   }
 ]

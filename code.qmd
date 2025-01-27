@@ -14,3 +14,4 @@ filters:
 
 [Video 5](code/video5.R)
 
+[Video 6](code/video6.R)
