@@ -25,7 +25,7 @@
     "href": "materials.html#week-2",
     "title": "Course materials",
     "section": "Week 2",
-    "text": "Week 2\nSampling the posterior\nSampling practice (SR2 ch3)\nEtherpad\nCode for video 3"
+    "text": "Week 2\nSampling the posterior\nSampling practice (SR2 ch3)\n\nCode for video 3"
   },
   {
     "objectID": "code/video2.html",
@@ -67,14 +67,14 @@
     "href": "code.html",
     "title": "Code to accompany video lectures",
     "section": "",
-    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6"
+    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6\nVideo 7"
   },
   {
     "objectID": "code.html#section",
     "href": "code.html#section",
     "title": "Code to accompany video lectures",
     "section": "",
-    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6"
+    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6\nVideo 7"
   },
   {
     "objectID": "index.html",
@@ -102,6 +102,6 @@
     "href": "materials.html#week-4",
     "title": "Course materials",
     "section": "Week 4",
-    "text": "Week 4\nCode for video 6"
+    "text": "Week 4\nCode for video 6\nCode for video 7\nCode template for chapter 7"
   }
 ]

@@ -22,7 +22,7 @@ filters:
 
 [Sampling practice (SR2 ch3)](images/sr2_ch3_practice.png)
 
-[Etherpad](https://etherpad.wikimedia.org/p/re_stats2)
+<!-- [Etherpad](https://etherpad.wikimedia.org/p/re_stats2) -->
 
 [Code for video 3](code/video3.R)
 
@@ -39,6 +39,10 @@ filters:
 ## Week 4
 
 [Code for video 6](code/video6.R)
+
+[Code for video 7](code/video7.R)
+
+[Code template for chapter 7](code/sr2_07_class_demo-student.R)
 
 
 <!-- [Probability](_lectures/probability-lecture.pdf) -->
