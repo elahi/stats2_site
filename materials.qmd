@@ -44,5 +44,10 @@ filters:
 
 [Code template for chapter 7](code/sr2_07_class_demo-student.R)
 
+## Week 5
+
+[Code for video 8](code/video8.R)
+
+[Markov chain Monte Carlo](lectures/mcmc.pdf)
 
 <!-- [Probability](_lectures/probability-lecture.pdf) -->
