@@ -50,4 +50,8 @@ filters:
 
 [Markov chain Monte Carlo](lectures/mcmc.pdf)
 
+[Midterm problem](files/midterm_2025.pdf)
+
+[Midterm template](code/midterm_2025-template.qmd)
+
 <!-- [Probability](_lectures/probability-lecture.pdf) -->
