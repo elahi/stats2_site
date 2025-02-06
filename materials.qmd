@@ -52,6 +52,6 @@ filters:
 
 [Midterm problem](files/midterm_2025.pdf)
 
-[Midterm template](code/midterm_2025-template.qmd)
+[Midterm template](https://raw.githubusercontent.com/elahi/stats2_site/refs/heads/main/code/midterm_2025-template.qmd)
 
 <!-- [Probability](_lectures/probability-lecture.pdf) -->
