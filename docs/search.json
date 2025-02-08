@@ -67,14 +67,14 @@
     "href": "code.html",
     "title": "Code to accompany video lectures",
     "section": "",
-    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6\nVideo 7\nVideo 8"
+    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6\nVideo 7\nVideo 8\nVideo 9"
   },
   {
     "objectID": "code.html#section",
     "href": "code.html#section",
     "title": "Code to accompany video lectures",
     "section": "",
-    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6\nVideo 7\nVideo 8"
+    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6\nVideo 7\nVideo 8\nVideo 9"
   },
   {
     "objectID": "index.html",
@@ -109,6 +109,27 @@
     "href": "materials.html#week-5",
     "title": "Course materials",
     "section": "Week 5",
-    "text": "Week 5\nCode for video 8\nMarkov chain Monte Carlo\nMidterm problem\nMidterm template"
+    "text": "Week 5\nCode for video 8\nMarkov chain Monte Carlo\nCode for video 9"
+  },
+  {
+    "objectID": "code/midterm_2025-template.html",
+    "href": "code/midterm_2025-template.html",
+    "title": "Midterm - 2025",
+    "section": "",
+    "text": "Load the data:\n\nlibrary(rethinking)\nlibrary(tidyverse)\n# Set the web address where R will look for files from this repository\nrepo_url &lt;- \"https://raw.githubusercontent.com/elahi/elahi.github.io/master/\"\ndat &lt;- read.csv(paste(repo_url, \"data/meps_2012_survey_data.csv\", sep = \"\"))\nglimpse(dat)\n\nRows: 72\nColumns: 9\n$ X           &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,…\n$ site        &lt;chr&gt; \"ON\", \"ON\", \"ON\", \"ON\", \"ON\", \"ON\", \"ON\", \"ON\", \"ON\", \"ON\"…\n$ transect    &lt;chr&gt; \"ON0\", \"ON0\", \"ON0\", \"ON0\", \"ON1\", \"ON1\", \"ON1\", \"ON1\", \"O…\n$ quadrat     &lt;chr&gt; \"ON0_45\", \"ON0_46\", \"ON0_48\", \"ON0_49\", \"ON1_17\", \"ON1_84\"…\n$ chiton_mean &lt;dbl&gt; 0.0000000, 1.0000000, 0.0000000, 0.0000000, 1.0000000, 0.0…\n$ space       &lt;dbl&gt; 0.14213721, 0.22878590, 0.12508222, 0.24288815, 0.73034557…\n$ richness    &lt;int&gt; 10, 12, 8, 10, 10, 9, 9, 7, 8, 8, 9, 8, 10, 13, 10, 15, 13…\n$ simpsondiv  &lt;dbl&gt; 0.7004303, 0.7497803, 0.6160904, 0.7580468, 0.7172267, 0.7…\n$ urchin_mean &lt;dbl&gt; 0.6666667, 0.6666667, 0.6666667, 0.6666667, 1.0000000, 1.0…\n\n\nTransform the proportional cover of space so that we can model it using a normal distribution:\n\n# Define logit function\nlogit &lt;- function(p) log(p / (1 - p))\ndat &lt;- dat %&gt;% \n  mutate(space_logit = logit(space))\n# Plot\npar(mfrow = c(1,2))\nhist(dat$space, main = \"\", xlab = \"Space (proportion)\")\nhist(dat$space_logit, main = \"\", xlab = \"Space (logit)\")\n\n\n\n\n\n\n\n\nImportantly, the response is no longer bounded between 0 and 1. It is not important that logit(space) appears normally distributed! It just so happens that this is the case here. For now, ignore the effect of site and transect."
+  },
+  {
+    "objectID": "code/midterm_2025-template.html#the-data",
+    "href": "code/midterm_2025-template.html#the-data",
+    "title": "Midterm - 2025",
+    "section": "",
+    "text": "Load the data:\n\nlibrary(rethinking)\nlibrary(tidyverse)\n# Set the web address where R will look for files from this repository\nrepo_url &lt;- \"https://raw.githubusercontent.com/elahi/elahi.github.io/master/\"\ndat &lt;- read.csv(paste(repo_url, \"data/meps_2012_survey_data.csv\", sep = \"\"))\nglimpse(dat)\n\nRows: 72\nColumns: 9\n$ X           &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,…\n$ site        &lt;chr&gt; \"ON\", \"ON\", \"ON\", \"ON\", \"ON\", \"ON\", \"ON\", \"ON\", \"ON\", \"ON\"…\n$ transect    &lt;chr&gt; \"ON0\", \"ON0\", \"ON0\", \"ON0\", \"ON1\", \"ON1\", \"ON1\", \"ON1\", \"O…\n$ quadrat     &lt;chr&gt; \"ON0_45\", \"ON0_46\", \"ON0_48\", \"ON0_49\", \"ON1_17\", \"ON1_84\"…\n$ chiton_mean &lt;dbl&gt; 0.0000000, 1.0000000, 0.0000000, 0.0000000, 1.0000000, 0.0…\n$ space       &lt;dbl&gt; 0.14213721, 0.22878590, 0.12508222, 0.24288815, 0.73034557…\n$ richness    &lt;int&gt; 10, 12, 8, 10, 10, 9, 9, 7, 8, 8, 9, 8, 10, 13, 10, 15, 13…\n$ simpsondiv  &lt;dbl&gt; 0.7004303, 0.7497803, 0.6160904, 0.7580468, 0.7172267, 0.7…\n$ urchin_mean &lt;dbl&gt; 0.6666667, 0.6666667, 0.6666667, 0.6666667, 1.0000000, 1.0…\n\n\nTransform the proportional cover of space so that we can model it using a normal distribution:\n\n# Define logit function\nlogit &lt;- function(p) log(p / (1 - p))\ndat &lt;- dat %&gt;% \n  mutate(space_logit = logit(space))\n# Plot\npar(mfrow = c(1,2))\nhist(dat$space, main = \"\", xlab = \"Space (proportion)\")\nhist(dat$space_logit, main = \"\", xlab = \"Space (logit)\")\n\n\n\n\n\n\n\n\nImportantly, the response is no longer bounded between 0 and 1. It is not important that logit(space) appears normally distributed! It just so happens that this is the case here. For now, ignore the effect of site and transect."
+  },
+  {
+    "objectID": "code/midterm_2025-template.html#suggested-workflow",
+    "href": "code/midterm_2025-template.html#suggested-workflow",
+    "title": "Midterm - 2025",
+    "section": "Suggested workflow",
+    "text": "Suggested workflow\nYou will skip the generative simulation for this exercise. Here is a suggested workflow:\n\nVisualize the data to make sense of the patterns\nStandardize the predictors\nCome up with sensible priors by plotting prior predictive distributions (see HW4-key or SR2 Fig 5.8 for example). Justify your choice of priors.\nRun the models using ulam. Diagnose your chains - what are the criteria you checked to ensure convergence? See SR2 9.4-9.5 for help.\nCompare WAIC for the models.\nInterpret in the context of the DAG and the published results.\nPlot the counterfactual effect of one predictor, holding any other predictors constant. Justify your choice of the model used for these posterior predictions. See SR2 Fig. 5.9 for example of a counterfactual plot from a multiple regression. Interpret."
   }
 ]

@@ -50,8 +50,11 @@ filters:
 
 [Markov chain Monte Carlo](lectures/mcmc.pdf)
 
-[Midterm problem](files/midterm_2025.pdf)
+[Code for video 9](code/video9.R)
 
-[Midterm template](https://raw.githubusercontent.com/elahi/stats2_site/refs/heads/main/code/midterm_2025-template.qmd)
+
+<!-- [Midterm problem](files/midterm_2025.pdf) -->
+
+<!-- [Midterm template](https://raw.githubusercontent.com/elahi/stats2_site/refs/heads/main/code/midterm_2025-template.qmd) -->
 
 <!-- [Probability](_lectures/probability-lecture.pdf) -->
