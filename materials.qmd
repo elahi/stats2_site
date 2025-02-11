@@ -16,6 +16,8 @@ filters:
 
 <!-- [Homework 1](files/hw1.pdf) -->
 
+<!-- [Probability](_lectures/probability-lecture.pdf) -->
+
 ## Week 2
 
 [Sampling the posterior](lectures/sampling_the_posterior.pdf)
@@ -50,11 +52,17 @@ filters:
 
 [Markov chain Monte Carlo](lectures/mcmc.pdf)
 
-[Code for video 9](code/video9.R)
-
-
 <!-- [Midterm problem](files/midterm_2025.pdf) -->
 
 <!-- [Midterm template](https://raw.githubusercontent.com/elahi/stats2_site/refs/heads/main/code/midterm_2025-template.qmd) -->
 
-<!-- [Probability](_lectures/probability-lecture.pdf) -->
+## Week 6
+
+[Code for video 9](code/video9.R)
+
+[Problem - pirates](images/problem_pirates.png)
+
+[Code for video 10](code/video10.R)
+
+[Problem - salamanders](images/problem_salamanders.png)
+

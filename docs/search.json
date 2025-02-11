@@ -67,14 +67,14 @@
     "href": "code.html",
     "title": "Code to accompany video lectures",
     "section": "",
-    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6\nVideo 7\nVideo 8\nVideo 9"
+    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6\nVideo 7\nVideo 8\nVideo 9\nVideo 10"
   },
   {
     "objectID": "code.html#section",
     "href": "code.html#section",
     "title": "Code to accompany video lectures",
     "section": "",
-    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6\nVideo 7\nVideo 8\nVideo 9"
+    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6\nVideo 7\nVideo 8\nVideo 9\nVideo 10"
   },
   {
     "objectID": "index.html",
@@ -109,7 +109,7 @@
     "href": "materials.html#week-5",
     "title": "Course materials",
     "section": "Week 5",
-    "text": "Week 5\nCode for video 8\nMarkov chain Monte Carlo\nCode for video 9"
+    "text": "Week 5\nCode for video 8\nMarkov chain Monte Carlo"
   },
   {
     "objectID": "code/midterm_2025-template.html",
@@ -131,5 +131,12 @@
     "title": "Midterm - 2025",
     "section": "Suggested workflow",
     "text": "Suggested workflow\nYou will skip the generative simulation for this exercise. Here is a suggested workflow:\n\nVisualize the data to make sense of the patterns\nStandardize the predictors\nCome up with sensible priors by plotting prior predictive distributions (see HW4-key or SR2 Fig 5.8 for example). Justify your choice of priors.\nRun the models using ulam. Diagnose your chains - what are the criteria you checked to ensure convergence? See SR2 9.4-9.5 for help.\nCompare WAIC for the models.\nInterpret in the context of the DAG and the published results.\nPlot the counterfactual effect of one predictor, holding any other predictors constant. Justify your choice of the model used for these posterior predictions. See SR2 Fig. 5.9 for example of a counterfactual plot from a multiple regression. Interpret."
+  },
+  {
+    "objectID": "materials.html#week-6",
+    "href": "materials.html#week-6",
+    "title": "Course materials",
+    "section": "Week 6",
+    "text": "Week 6\nCode for video 9\nProblem - pirates\nCode for video 10\nProblem - salamanders"
   }
 ]
