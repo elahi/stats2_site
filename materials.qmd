@@ -68,4 +68,8 @@ filters:
 
 [Poisson GLM](lectures/glm_poisson.pdf)
 
+[Priors for Poisson](code/priors_poisson.R)
+
+[Template for prior predictive distributions](files/Template_prior_predictive_distributions.pdf)
+
 [HW6](files/hw6.pdf)
