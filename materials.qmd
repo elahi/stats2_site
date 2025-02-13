@@ -60,10 +60,12 @@ filters:
 
 [Code for video 9](code/video9.R)
 
-[Problem - pirates](images/problem_pirates.png)
+<!-- [Problem - pirates](images/problem_pirates.png) -->
 
 [Code for video 10](code/video10.R)
 
-[Problem - salamanders](images/problem_salamanders.png)
+<!-- [Problem - salamanders](images/problem_salamanders.png) -->
 
-[HW5-key](files/hw5-key.pdf)
+[Poisson GLM](lectures/glm_poisson.pdf)
+
+[HW6](files/hw6.pdf)
