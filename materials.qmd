@@ -72,4 +72,9 @@ filters:
 
 [Template for prior predictive distributions](files/Template_prior_predictive_distributions.pdf)
 
-[HW6](files/hw6.pdf)
+[HW6](files/hw6.pdf) 
+
+## Week 7
+
+[Code for video 11](code/video11.R)
+
