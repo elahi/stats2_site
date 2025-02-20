@@ -25,3 +25,6 @@ filters:
 [Video 10](code/video10.R)
 
 [Video 11](code/video11.R)
+
+[Video 12](code/video12.R)
+
