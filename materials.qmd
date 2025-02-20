@@ -72,10 +72,15 @@ filters:
 
 [Template for prior predictive distributions](files/Template_prior_predictive_distributions.pdf)
 
-[HW6](files/hw6.pdf) 
+<!-- [HW6](files/hw6.pdf)  -->
 
 ## Week 7
 
 [Code for video 11](code/video11.R)
 
 [Code for video 12](code/video12.R)
+
+[Reed frog models](files/varying_intercepts-slides-2025.pdf) 
+
+[HW7](files/hw7.pdf) 
+
