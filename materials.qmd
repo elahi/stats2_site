@@ -82,5 +82,11 @@ filters:
 
 [Reed frog models](files/varying_intercepts-slides-2025.pdf) 
 
-[HW7](files/hw7.pdf) 
+<!-- [HW7](files/hw7.pdf)  -->
+
+## Week 8
+
+[Code for video 13](code/video13.R)
+
+
 
