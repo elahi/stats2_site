@@ -29,3 +29,7 @@ filters:
 [Video 12](code/video12.R)
 
 [Video 13](code/video13.R)
+
+[Video 14](code/video14.R)
+
+[SR2 code for 14.1](code/sr2_code_14.1.R)

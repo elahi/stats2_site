@@ -88,5 +88,13 @@ filters:
 
 [Code for video 13](code/video13.R)
 
+[Code for video 14](code/video14.R)
+
+[SR2 code for 14.1](code/sr2_code_14.1.R)
+
+[Varying intercepts](files/varying_slopes-slides-2025.pdf) 
+
+[HW8](files/hw8.pdf)
+
 
 
