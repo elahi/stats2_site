@@ -92,7 +92,7 @@ filters:
 
 [SR2 code for 14.1](code/sr2_code_14.1.R)
 
-[Varying intercepts](files/varying_slopes-slides-2025.pdf) 
+[Varying slopes - slides](files/varying_slopes-slides-2025.pdf) 
 
 [HW8](files/hw8.pdf)
 
