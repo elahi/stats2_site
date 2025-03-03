@@ -67,14 +67,14 @@
     "href": "code.html",
     "title": "Code to accompany video lectures",
     "section": "",
-    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6\nVideo 7\nVideo 8\nVideo 9\nVideo 10\nVideo 11\nVideo 12\nVideo 13\nVideo 14\nSR2 code for 14.1"
+    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6\nVideo 7\nVideo 8\nVideo 9\nVideo 10\nVideo 11\nVideo 12\nVideo 13\nVideo 14\nSR2 code for 14.1\nVideo 16"
   },
   {
     "objectID": "code.html#section",
     "href": "code.html#section",
     "title": "Code to accompany video lectures",
     "section": "",
-    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6\nVideo 7\nVideo 8\nVideo 9\nVideo 10\nVideo 11\nVideo 12\nVideo 13\nVideo 14\nSR2 code for 14.1"
+    "text": "Video 2\nVideo 3\nVideo 4\nVideo 5\nVideo 6\nVideo 7\nVideo 8\nVideo 9\nVideo 10\nVideo 11\nVideo 12\nVideo 13\nVideo 14\nSR2 code for 14.1\nVideo 16"
   },
   {
     "objectID": "index.html",
@@ -152,5 +152,12 @@
     "title": "Course materials",
     "section": "Week 8",
     "text": "Week 8\nCode for video 13\nCode for video 14\nSR2 code for 14.1\nVarying slopes - slides\nHW8"
+  },
+  {
+    "objectID": "materials.html#week-9",
+    "href": "materials.html#week-9",
+    "title": "Course materials",
+    "section": "Week 9",
+    "text": "Week 9\nCode for video 16"
   }
 ]
