@@ -1,0 +1,92 @@
+---
+title: "My awesome Bayesian project"
+author: Stanislaw Ulam
+output: beamer_presentation
+latex_engine: xelatex
+---
+
+```{r, echo = FALSE, warning= FALSE, message = FALSE}
+library(knitr)
+```
+
+## Background
+
+- Give a **quick** overview of your awesome project.
+- One slide only!
+
+## DAG
+
+- Use `dagitty` to draw your awesome DAG, or take a picture of your DAG and put it here using the code below.
+- Save the image as png and you fiddle with the `out.width` percent below as needed.
+
+```{r, out.width = "60%", fig.align = 'center', echo = FALSE}
+include_graphics("dag_example.png")
+```
+
+## Mathematical model
+
+- Take a picture of your mathematical model and put it here using code similar to the previous slide.
+
+```{r, out.width = "70%", fig.align = 'center', echo = TRUE, eval = FALSE}
+#include_graphics("xxx.png")
+```
+
+## Mathematical model
+
+- Alternatively, you can use latex. Here's one for multilevel cafes:
+
+$$
+\begin{aligned}
+W_i & \sim \text{Normal}(\mu_i, \sigma) \\
+\mu_i & = \alpha_{\text{cafe[i]}} + \beta_{\text{cafe[i]}}A_i \\
+\alpha_{\text{cafe[i]}} & \sim \text{Normal}(\alpha, \sigma_{\alpha}) \\
+\beta_{\text{cafe[i]}} & \sim \text{Normal}(\beta, \sigma_{\beta}) \\
+\alpha & \sim \text{Normal}(5, 2) \\
+\beta & \sim \text{Normal}(-1, 0.5) \\
+\sigma, \sigma_{\alpha}, \sigma_{\beta} & \sim \text{Exponential}(1) \\
+\end{aligned}
+$$
+
+## Model, in `rethinking`
+
+```{r, echo = TRUE, eval = FALSE}
+m14.1 <- ulam(
+    alist(
+        wait ~ normal( mu , sigma ),
+        mu <- a_cafe[cafe] + b_cafe[cafe]*afternoon,
+        c(a_cafe,b_cafe)[cafe] ~ multi_normal( c(a,b) , 
+                                 Rho , sigma_cafe ),
+        a ~ normal(5,2),
+        b ~ normal(-1,0.5),
+        sigma_cafe ~ exponential(1),
+        sigma ~ exponential(1),
+        Rho ~ lkj_corr(2)
+    ) , data=d , chains=4 , cores=4 )
+```
+
+## Diagnose your chains
+
+- Just one slide, summarize as necessary
+
+## Plot the prior and posterior on the same figure
+
+- Do this for one relevant parameter
+- Here's a different way to embed a png (you can still fiddle with `width`)
+
+\center
+![](sr_14.4.png){width=50%}
+
+## Caterpillar plot of the most important parameters
+
+- E.g., the plot you get from using `plot(precis)`
+
+## Plot of posterior predictions
+
+- plot data and model predictions with uncertainty
+
+- e.g., the plot you get from using `postcheck` 
+
+## Conclusions
+
+- One slide only!
+

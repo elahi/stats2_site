@@ -100,4 +100,11 @@ filters:
 
 [Code for video 16](code/video16.R)
 
+[Code for video 17](code/video17.R)
+
+[Project presentation template - Rmd](_project/project_presentation_template.Rmd)
+
+[Project presentation template - pdf](_project/project_presentation_template.pdf)
+
+## Week 10
 

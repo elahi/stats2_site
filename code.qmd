@@ -35,3 +35,5 @@ filters:
 [SR2 code for 14.1](code/sr2_code_14.1.R)
 
 [Video 16](code/video16.R)
+
+[Video 17](code/video17.R)
