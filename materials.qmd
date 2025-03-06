@@ -106,5 +106,7 @@ filters:
 
 [Project presentation template - pdf](_project/project_presentation_template.pdf)
 
+[HW9](files/hw9.pdf)
+
 ## Week 10
 
