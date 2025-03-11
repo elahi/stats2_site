@@ -37,3 +37,6 @@ filters:
 [Video 16](code/video16.R)
 
 [Video 17](code/video17.R)
+
+[Video 18](code/video18.R)
+
